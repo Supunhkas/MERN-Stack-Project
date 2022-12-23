@@ -52,7 +52,8 @@ router.route("/update/:id").put(async (req, res) => {
 
   const update = await Student.findByIdAndUpdate(userId, updateStudent)
     .then(() => {
-      res.status(200).send({ status: "User Updated", user: update });
+      res.status(200).send({ status: "User Updated" });
+      
     })
     .catch((err) => {
       console.log(err);
