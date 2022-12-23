@@ -29,7 +29,10 @@ connection.once("open", () => {
   console.log("MOngo db Connection Succeess");
 });
 
+// for connnec with routes
+const studentRouter = require(".routes/Stidents.js");
+app.use("/student", studentRouter);
+
 app.listen(PORT, () => {
   console.log(`Server up and running on port ${PORT}`);
 });
-
