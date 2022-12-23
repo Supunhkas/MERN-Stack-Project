@@ -3,7 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const dontenv = require("dotenv");
+const dotenv = require("dotenv");
 const app = express();
 require("dotenv").config();
 
@@ -30,7 +30,7 @@ connection.once("open", () => {
 });
 
 // for connnec with routes
-const studentRouter = require(".routes/Stidents.js");
+const studentRouter = require("./routes/Students.js");
 app.use("/student", studentRouter);
 
 app.listen(PORT, () => {
